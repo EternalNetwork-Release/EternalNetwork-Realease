@@ -107,16 +107,6 @@ Eternal Network صفحة تعريف متعددة اللغات لخدمة شبك�
 
 راجع [الموقع الرسمي](https://etcloud.top/#/register?code=QkfuWy3i) لمعرفة الأسعار وتوفر المسارات حالياً.
 
----
 
-## 本地预览与部署
-
-项目是无需构建工具的纯静态 HTML 页面。直接打开 `index.html` 即可预览，也可以运行：
-
-```bash
-python -m http.server 8000
-```
-
-GitHub Pages 部署时，将发布源设置为 `master` 分支的根目录 `/`。当前在线页面发布于 [`EternalNetwork-Release/HTML`](https://github.com/EternalNetwork-Release/HTML)。抓取记录位于 `.site-crawl/`，该目录已被 `.gitignore` 忽略。
 
 > 信息来源：Eternal Network 使用文档，页面内容更新于 2026-09-01。套餐价格、线路状态和官网服务以实时信息为准。
