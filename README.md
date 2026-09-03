@@ -10,7 +10,8 @@
 - 外网清单：搜索、AI、开发、科研、社交、兴趣、隐私、内容平台与 civitai，页面提供对应网站链接或平台说明
 - 社区支持：官网文档、活跃工单与 [Telegram 群聊](https://t.me/Etcloud)，可直接联系群主和管理员
 - 主题：默认白色，可在右上角切换黑色模式
-- 字体：通过 Google Fonts 加载 Google Sans，并保留系统字体回退
+- 语言：中文、English、Русский、فارسی、العربية；选择会保存在浏览器本地
+- 字体：通过 Google Fonts 加载 Google Sans 与 Noto 字体系列。中文使用 Noto Sans SC，英文和俄文使用 Noto Sans，波斯文和阿拉伯文使用 Noto Sans Arabic；Noto 系列统一覆盖不同文字体系并保留系统字体回退
 
 ## 本地预览
 
