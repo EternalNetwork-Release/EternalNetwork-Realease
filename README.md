@@ -2,7 +2,7 @@
 
 多语言静态服务介绍页，可直接部署到 GitHub Pages。
 
-- 在线页面：<https://eternalnetwork-release.github.io/HTML/>
+- 在线页面：<https://eternalnetwork-release.github.io/>
 - 官网与注册：<https://etcloud.top/#/register?code=QkfuWy3i>
 - Telegram 社区：<https://t.me/Etcloud>
 - 页面入口：[`index.html`](./index.html)
@@ -117,6 +117,6 @@ Eternal Network صفحة تعريف متعددة اللغات لخدمة شبك�
 python -m http.server 8000
 ```
 
-GitHub Pages 部署时，将发布源设置为 `master` 分支的根目录 `/`。当前在线页面发布于 [`EternalNetwork-Release/HTML`](https://github.com/EternalNetwork-Release/HTML)。抓取记录位于 `.site-crawl/`，该目录已被 `.gitignore` 忽略。
+GitHub Pages 部署时，将发布源设置为 `master` 分支的根目录 `/`。当前在线页面发布于 [`EternalNetwork-Release/EternalNetwork-Release.github.io`](https://github.com/EternalNetwork-Release/EternalNetwork-Release.github.io)。抓取记录位于 `.site-crawl/`，该目录已被 `.gitignore` 忽略。
 
 > 信息来源：Eternal Network 使用文档，页面内容更新于 2026-09-01。套餐价格、线路状态和官网服务以实时信息为准。
