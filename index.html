@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eternal Network 服务权益说明：IEPL 专线、流媒体访问、全平台客户端和社区支持。">
+  <title>Eternal Network · 服务权益说明</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+    :root { --ink:#111; --muted:#5f5f5f; --line:#d7d7d7; --panel:#f5f5f3; --bg:#fff; --sans:"Google Sans","Aptos","Segoe UI",system-ui,sans-serif; --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace; }
+    body.dark { --ink:#f5f5f2; --muted:#a5a5a0; --line:#343434; --panel:#191919; --bg:#0d0d0d; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--bg); font-family:var(--sans); line-height:1.55; transition:background .2s ease,color .2s ease; }
+    a { color:inherit; }
+    .shell { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
+    .topbar { min-height:72px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); gap:20px; }
+    .brand { display:inline-flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; letter-spacing:.02em; }
+    .brand-mark { width:28px; height:28px; display:grid; place-items:center; border:1px solid var(--ink); font:11px var(--mono); }
+    nav { display:flex; align-items:center; justify-content:flex-end; gap:16px; color:var(--muted); font-size:13px; }
+    nav a { text-decoration:none; }
+    nav a:hover,nav a:focus-visible { color:var(--ink); }
+    .nav-cta { padding:8px 12px; border:1px solid var(--ink); color:var(--ink); }
+    .theme-toggle { border:1px solid var(--line); background:transparent; color:var(--ink); padding:8px 10px; font:11px var(--mono); cursor:pointer; }
+
+    .hero { padding:78px 0 72px; border-bottom:1px solid var(--line); }
+    .eyebrow { color:var(--muted); font:11px var(--mono); letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:820px; margin:16px 0 20px; font-size:clamp(44px,7vw,84px); line-height:.98; letter-spacing:-.055em; }
+    h1 span { display:block; font-weight:400; }
+    .lede { max-width:700px; margin:0; color:var(--muted); font-size:18px; font-family:Georgia,"Times New Roman",serif; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .button { display:inline-flex; align-items:center; gap:8px; padding:11px 15px; border:1px solid var(--ink); background:var(--ink); color:var(--bg); text-decoration:none; font-size:13px; font-weight:700; }
+    .button:hover,.button:focus-visible { opacity:.78; }
+    .button.ghost { background:transparent; color:var(--ink); border-color:var(--line); }
+    .hero-facts { display:grid; grid-template-columns:repeat(4,1fr); margin-top:54px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .fact { min-height:124px; padding:18px 18px 18px 0; border-right:1px solid var(--line); }
+    .fact:not(:first-child) { padding-left:18px; }
+    .fact:last-child { border-right:0; }
+    .fact b { display:block; margin-bottom:8px; font-size:15px; }
+    .fact span { color:var(--muted); font-size:13px; }
+    .fact code { color:var(--ink); font:11px var(--mono); overflow-wrap:anywhere; }
+    .section { padding:82px 0; border-bottom:1px solid var(--line); }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:28px; margin-bottom:34px; }
+    h2 { margin:9px 0 0; font-size:clamp(30px,4vw,52px); line-height:1.02; letter-spacing:-.045em; }
+    .section-head p { max-width:430px; margin:0; color:var(--muted); font-size:14px; }
+    #scenarios .section-head p { max-width:none; flex:1; }
+    .benefit-list { border-top:1px solid var(--line); }
+    .benefit-row { display:grid; grid-template-columns:190px minmax(0,1fr); gap:28px; padding:22px 0; border-bottom:1px solid var(--line); }
+    .benefit-row strong { font-size:14px; }
+    .benefit-row span { color:var(--muted); font-size:14px; }
+    .benefit-row code { color:var(--ink); font:12px var(--mono); overflow-wrap:anywhere; }
+    .pricing-layout { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(260px,.75fr); gap:36px; align-items:start; }
+    .price-table { border-top:1px solid var(--line); }
+    .price-card { display:grid; grid-template-columns:145px 100px minmax(0,1fr); gap:20px; align-items:start; padding:18px 0; border-bottom:1px solid var(--line); }
+    .price-card h3 { margin:0 0 4px; font-size:17px; }
+    .price-card small { color:var(--muted); font-size:12px; }
+    .price-value { font-size:23px; font-weight:700; line-height:1; }
+    .price-value small { display:block; margin-top:6px; font-size:11px; font-weight:400; }
+    .price-features { display:flex; flex-wrap:wrap; gap:6px 14px; margin:0; padding:0; list-style:none; color:var(--muted); font-size:13px; }
+    .price-features li::before { content:'+'; color:var(--ink); margin-right:5px; }
+    .price-chart { border:1px solid var(--line); padding:20px; background:var(--panel); }
+    .price-chart h3 { margin:0 0 18px; font-size:18px; }
+    .watch-table { width:100%; border-collapse:collapse; font-size:12px; }
+    .watch-table th,.watch-table td { padding:9px 6px; text-align:left; border-bottom:1px solid var(--line); }
+    .watch-table th { color:var(--muted); font-weight:500; }
+    .watch-table td:not(:first-child) { white-space:nowrap; }
+    .chart-note { margin:18px 0 0; color:var(--muted); font-size:12px; }
+    .pricing-cta { display:flex; justify-content:flex-start; margin-top:28px; }
+    .info-tip { position:relative; display:inline-flex; align-items:center; justify-content:center; width:21px; height:21px; margin-left:8px; border:1px solid var(--line); border-radius:50%; background:transparent; color:var(--ink); font:11px var(--mono); cursor:help; vertical-align:2px; }
+    .info-tip span { position:absolute; z-index:2; top:calc(100% + 10px); right:0; width:250px; padding:10px 12px; border:1px solid var(--line); background:var(--bg); color:var(--muted); font:12px/1.5 var(--sans); text-align:left; opacity:0; pointer-events:none; transform:translateY(-4px); transition:opacity .15s ease,transform .15s ease; }
+    .info-tip:hover span,.info-tip:focus-visible span { opacity:1; pointer-events:auto; transform:none; }
+    .platform-list { display:flex; flex-wrap:wrap; gap:8px; }
+    .platform { border:1px solid var(--line); padding:13px 15px; min-width:145px; background:var(--panel); }
+    .platform b { display:block; font-size:14px; }
+    .platform small { color:var(--muted); font-size:12px; }
+
+
+
+    .price-list { border-top:1px solid var(--line); }
+    .price-row { display:grid; grid-template-columns:150px 1fr; gap:22px; padding:20px 0; border-bottom:1px solid var(--line); }
+    .price-row strong { font-size:14px; }
+    .price-row span { color:var(--muted); font-size:14px; }
+    .protocol-note { padding:26px; border:1px solid var(--ink); background:var(--panel); }
+    .protocol-note h3 { margin:10px 0 12px; font-size:30px; line-height:1.05; letter-spacing:-.04em; }
+    .protocol-note p { margin:0; color:var(--muted); font-size:14px; }
+    .protocol-note .button { margin-top:22px; }
+    .catalog { display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px; border-top:1px solid var(--line); }
+    .catalog-group { padding:22px 0 20px; border-bottom:1px solid var(--line); }
+    .catalog-group h3 { margin:0 0 10px; font-size:16px; }
+    .catalog-group ul { display:flex; flex-wrap:wrap; gap:7px 16px; margin:0; padding-left:18px; color:var(--muted); font-size:14px; }
+    .catalog-group a { color:var(--ink); text-underline-offset:3px; }
+    .catalog-group a:hover,.catalog-group a:focus-visible { color:var(--muted); }
+    .support { display:grid; grid-template-columns:.9fr 1.1fr; gap:52px; align-items:start; }
+    .support-callout { padding:24px; background:var(--ink); color:var(--bg); }
+    .support-callout h3 { margin:10px 0 12px; font-size:30px; line-height:1.05; letter-spacing:-.04em; }
+    .support-callout p { margin:0; opacity:.72; font-size:14px; }
+    .support-callout .button { margin-top:22px; background:var(--bg); color:var(--ink); border-color:var(--bg); }
+    .story { border-top:1px solid var(--line); }
+    .story-row { display:grid; grid-template-columns:145px 1fr; gap:22px; padding:18px 0; border-bottom:1px solid var(--line); }
+    .story-row strong { font-size:14px; }
+    .story-row span { color:var(--muted); font-size:14px; }
+    .source { display:flex; justify-content:space-between; gap:18px; padding:24px 0 38px; color:var(--muted); font:11px var(--mono); }
+    .source a { color:var(--ink); text-underline-offset:3px; }
+    :focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
+    @media (max-width:820px) {
+      .hero-facts,.catalog,.support,
+      .fact,.fact:not(:first-child) { padding:16px 0; border-right:0; border-bottom:1px solid var(--line); }
+      .fact:last-child { border-bottom:0; }
+      .benefit-row { padding:18px 0; }
+      .pricing-layout { grid-template-columns:1fr; gap:28px; }
+      .pricing-cta { margin-top:24px; }
+      .price-card { grid-template-columns:130px 90px minmax(0,1fr); gap:14px; }
+      .section-head { display:block; }
+      .section-head p { margin-top:16px; }
+      .support { gap:30px; }
+    }
+    @media (max-width:560px) {
+      .shell { width:min(100% - 28px,1120px); }
+      .topbar { min-height:64px; }
+      nav a:not(.nav-cta) { display:none; }
+      .hero { padding:56px 0 54px; }
+      h1 { font-size:48px; }
+      .lede { font-size:16px; }
+      .benefit-row,.story-row,.price-row { grid-template-columns:1fr; gap:5px; }
+      .price-card { grid-template-columns:1fr 90px; gap:10px; }
+      .price-features { grid-column:1 / -1; }
+      .platform { flex:1 1 calc(50% - 8px); min-width:0; }
+      .source { display:block; line-height:1.8; }
+      .source span + span { display:block; margin-top:7px; }
+    }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar shell">
+    <a class="brand" href="#top" aria-label="Eternal Network 首页"><span class="brand-mark">EN</span><span>Eternal Network</span></a>
+    <nav aria-label="页面导航"><a href="#benefits">服务权益</a><a href="#pricing">价格套餐</a><a href="#scenarios">服务目录</a><a href="#support">支持</a><a class="nav-cta" href="https://etcloud.top/#/register?code=QkfuWy3i" target="_blank" rel="noreferrer">进入官网 ↗</a><button class="theme-toggle" type="button" aria-pressed="false" aria-label="切换黑夜模式">黑夜模式</button></nav>
+  </header>
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow">ETERNAL NETWORK / SERVICE BRIEF</div>
+      <h1><span class="hero-title">低价 IEPL 专线机场</span><span style="font-weight:300">小众机场，低延迟高稳定。</span></h1>
+      <p class="lede">Eternal Network 提供 IEPL 专线、流媒体访问、桌面与移动端客户端，以及 OpenWrt 路由支持。iOS 用户可按文档使用共享小火箭账号。遇到问题，有工单、使用文档和 Telegram 群聊可以直接问群主、管理员或群友。</p>
+      <div class="hero-actions"><a class="button" href="https://etcloud.top/#/register?code=QkfuWy3i" target="_blank" rel="noreferrer">购买并使用 ↗</a><a class="button ghost" href="https://t.me/Etcloud" target="_blank" rel="noreferrer">加入 Telegram 群 ↗</a></div>
+      <div class="hero-facts" aria-label="服务权益速览"><div class="fact"><b>IEPL 专线</b><span>最高等级线路，最低延迟和高稳定性。</span></div><div class="fact"><b>流媒体解锁及验证</b><span>YouTube、Netflix、Disney+、Spotify 等服务可注册并访问。购买套餐后导入代理软件，开启 TUN 模式，在 macOS 终端或 Windows Git Bash 运行 <code>bash &lt;(curl -L -s check.unlock.media)</code>，方法见 <a href="https://github.com/lmc999/RegionRestrictionCheck" target="_blank" rel="noreferrer">RegionRestrictionCheck</a>。</span></div><div class="fact"><b>全平台</b><span>Windows、macOS、Android、Linux、OpenWrt，iOS 的 Shadowrocket 有共享账号，登录下载不用自己购买。</span></div><div class="fact"><b>工单和群组支持</b><span>文档、工单和 Telegram 群聊都在，有问题可以立即找人跟进。先看文档，再发工单，最后 Telegram，直接找群友聊天也可以。</span></div></div>
+    </section>
+    <section class="section" id="benefits"><div class="shell"><div class="section-head"><div><div class="eyebrow">01 / SERVICE BENEFITS</div><h2>Eternal Network的服务</h2></div><p>IEPL线路、AnyTLS协议、抗封锁能力强、所有设备可用。</p></div><div class="benefit-list"><div class="benefit-row"><strong>线路体验</strong><span>小众精品专线机场。每 GB 价格较高，低价套餐流量较少，但线路负载低。16 元以上套餐提供 IEPL 专线，群友会监督并反馈不可用线路，鞭策后的服务就是好用👌。</span></div><div class="benefit-row"><strong>流媒体解锁</strong><span>YouTube、Netflix、Disney+、Spotify 等服务可注册并访问。购买套餐后导入代理软件，开启 TUN 模式，可在 macOS 终端或 Windows Git Bash 运行 <code>bash &lt;(curl -L -s check.unlock.media)</code> 做解锁检测，方法见 <a href="https://github.com/lmc999/RegionRestrictionCheck" target="_blank" rel="noreferrer">RegionRestrictionCheck</a>。</span></div><div class="benefit-row"><strong>连接模式</strong><span>支持 TUN、全局和规则模式，也有校园网 / 内网模式。订阅可一键导入和更新，网络波动时客户端会自动重试。</span></div><div class="benefit-row"><strong>路由器覆盖</strong><span>OpenWrt 支持路由级代理，家里的多台设备可以一起使用，不必逐台安装客户端。</span></div><div class="benefit-row"><strong>iOS 使用</strong><span>iOS 按文档使用 Shadowrocket，订阅用户可获得共享的付费美区 Apple ID 供下载应用。</span></div><div class="benefit-row"><strong>抗封锁协议</strong><span>AnyTLS 将订阅内容与连接流量分开保护，减少节点信息被直接获取，日常切换网络时也更稳。</span></div><div class="benefit-row"><strong>支持渠道</strong><span>官网文档适合查步骤，工单适合跟进个体问题，Telegram 群聊可以直接联系群主和管理员，也有群友帮忙排查。</span></div></div></div></section>
+    <section class="section" id="pricing"><div class="shell"><div class="section-head"><div><div class="eyebrow">02 / PLANS</div><h2>按月选择合适的流量和线路</h2></div><p>五档月付套餐，节点统一使用 AnyTLS。16 元起的套餐包含 IEPL 专线。</p></div><div class="pricing-layout"><div class="price-table"><article class="price-card"><div><h3>焦糖布丁</h3><small>入门月付</small></div><div class="price-value">￥6<small>/ 月</small></div><ul class="price-features"><li>60GB 流量</li><li>低延迟隧道</li><li>最高 5Gbps</li><li>流媒体解锁</li><li>全球原生 ISP 节点</li></ul></article><article class="price-card"><div><h3>芒果奶昔</h3><small>常用月付</small></div><div class="price-value">￥10<small>/ 月</small></div><ul class="price-features"><li>130GB 流量</li><li>低延迟隧道</li><li>最高 5Gbps</li><li>流媒体解锁</li><li>含焦糖布丁节点与冗余节点</li></ul></article><article class="price-card"><div><h3>黄油曲奇</h3><small>IEPL 起步</small></div><div class="price-value">￥16<small>/ 月</small></div><ul class="price-features"><li>245GB 流量</li><li>低延迟隧道 + IEPL</li><li>最高 5Gbps</li><li>流媒体解锁</li><li>含焦糖布丁节点与冗余节点</li></ul></article><article class="price-card"><div><h3>奶油奶酪</h3><small>大流量月付</small></div><div class="price-value">￥24<small>/ 月</small></div><ul class="price-features"><li>335GB 流量</li><li>低延迟隧道 + IEPL</li><li>最高 5Gbps</li><li>流媒体解锁</li><li>含焦糖布丁节点与冗余节点</li></ul></article><article class="price-card"><div><h3>芝士蛋糕</h3><small>重度使用</small></div><div class="price-value">￥42<small>/ 月</small></div><ul class="price-features"><li>720GB 流量</li><li>低延迟隧道 + IPLC</li><li>最高 5Gbps</li><li>流媒体解锁</li><li>含焦糖布丁节点与冗余节点</li></ul></article></div><aside class="price-chart"><h3>大致流量使用量</h3><table class="watch-table"><thead><tr><th>套餐</th><th>YouTube 1080P</th><th>Spotify 10MB 歌曲</th></tr></thead><tbody><tr><td>焦糖布丁 60G</td><td>约 30 小时</td><td>约 6,000 首</td></tr><tr><td>芒果奶昔 130G</td><td>约 65 小时</td><td>约 13,000 首</td></tr><tr><td>黄油曲奇 245G</td><td>约 120 小时</td><td>约 24,500 首</td></tr><tr><td>奶油奶酪 335G</td><td>约 165 小时</td><td>约 33,500 首</td></tr><tr><td>芝士蛋糕 720G</td><td>约 350 小时</td><td>约 72,000 首</td></tr></tbody></table><p class="chart-note">除视频、音乐这类大流量服务外，日常浏览网页对容量要求不高，更看重连接是否稳定。</p></aside></div><div class="pricing-cta"><a class="button" href="https://etcloud.top/#/register?code=QkfuWy3i" target="_blank" rel="noreferrer">购买并使用 ↗</a></div></div></section>
+    <section class="section" id="clients"><div class="shell"><div class="section-head"><div><div class="eyebrow">03 / CLIENTS</div><h2>提供专用客户端和共享账户，免配置省心</h2></div><p>相较于开源端，专用客户端有更多节点可用以及 IEPL 专线使用权 <button class="info-tip" type="button" aria-label="为什么？">?<span>由于 GFW 会通过拉取订阅获取节点并进行封锁，专用客户端会加密订阅内容，减少节点被直接获取。</span></button></p></div><div class="platform-list"><div class="platform"><b>Windows</b><small>专用客户端，支持 TUN</small></div><div class="platform"><b>macOS</b><small>桌面端订阅导入</small></div><div class="platform"><b>Android</b><small>移动端快速配置</small></div><div class="platform"><b>Linux</b><small>DEB、RPM、AppImage</small></div><div class="platform"><b>OpenWrt</b><small>路由级代理</small></div><div class="platform"><b>iOS</b><small>Shadowrocket + 文档</small></div></div></div></section>
+    <section class="section" id="scenarios"><div class="shell"><div class="section-head"><div><div class="eyebrow">04 / WHAT OPENS UP</div><h2>连上后能用什么</h2></div><p>常见服务入口都列在下面，点击即可打开对应网站，实际可用性取决于线路和服务本身的地区限制。</p></div><div class="catalog"><div class="catalog-group"><h3>搜索</h3><ul><li><a href="https://www.google.com/" target="_blank" rel="noreferrer">Google</a></li><li><a href="https://www.bing.com/" target="_blank" rel="noreferrer">Bing</a></li><li><a href="https://www.perplexity.ai/" target="_blank" rel="noreferrer">Perplexity</a></li></ul></div><div class="catalog-group"><h3>AI 与 agent</h3><ul><li><a href="https://chatgpt.com/" target="_blank" rel="noreferrer">ChatGPT</a></li><li><a href="https://claude.ai/" target="_blank" rel="noreferrer">Claude</a></li><li><a href="https://gemini.google.com/" target="_blank" rel="noreferrer">Gemini</a></li><li><a href="https://grok.com/" target="_blank" rel="noreferrer">Grok</a></li></ul></div><div class="catalog-group"><h3>流媒体</h3><ul><li><a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a></li><li><a href="https://www.netflix.com/" target="_blank" rel="noreferrer">Netflix</a></li><li><a href="https://www.disneyplus.com/" target="_blank" rel="noreferrer">Disney+</a></li><li><a href="https://open.spotify.com/" target="_blank" rel="noreferrer">Spotify</a></li></ul></div><div class="catalog-group"><h3>技术开发</h3><ul><li><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></li><li><a href="https://www.npmjs.com/" target="_blank" rel="noreferrer">npm</a></li><li><a href="https://www.docker.com/" target="_blank" rel="noreferrer">Docker</a></li><li><a href="https://huggingface.co/" target="_blank" rel="noreferrer">Hugging Face</a></li></ul></div><div class="catalog-group"><h3>学术科研</h3><ul><li><a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a></li><li><a href="https://arxiv.org/" target="_blank" rel="noreferrer">arXiv</a></li><li><a href="https://ieeexplore.ieee.org/" target="_blank" rel="noreferrer">IEEE Xplore</a></li></ul></div><div class="catalog-group"><h3>社交社区</h3><ul><li><a href="https://www.reddit.com/" target="_blank" rel="noreferrer">Reddit</a></li><li><a href="https://x.com/" target="_blank" rel="noreferrer">X</a></li><li><a href="https://discord.com/" target="_blank" rel="noreferrer">Discord</a></li><li><a href="https://telegram.org/" target="_blank" rel="noreferrer">Telegram</a></li></ul></div><div class="catalog-group"><h3>兴趣</h3><ul><li><a href="https://github.com/SillyTavern/SillyTavern" target="_blank" rel="noreferrer">SillyTavern</a></li><li><a href="https://github.com/pjy612/SteamManifestCache/releases/tag/Free" target="_blank" rel="noreferrer">Steam入库</a></li><li><a href="https://freegogpcgames.com/" target="_blank" rel="noreferrer">破解游戏</a></li></ul></div><div class="catalog-group"><h3>隐私</h3><ul><li><a href="https://www.privacyguides.org/" target="_blank" rel="noreferrer">Privacy Guides</a></li><li><a href="https://awesome-privacy.xyz/" target="_blank" rel="noreferrer">awesome-privacy</a></li><li><a href="https://www.eff.org/" target="_blank" rel="noreferrer">EFF</a></li></ul></div><div class="catalog-group"><h3>内容平台</h3><ul><li>Telegram：NSFW</li><li>Telegram：绘图 / 视频教程、工作流与讨论，<a href="https://civitai.com/" target="_blank" rel="noreferrer">civitai</a></li></ul></div></div></div></section>
+    <section class="section" id="support"><div class="shell"><div class="section-head"><div><div class="eyebrow">05 / REAL SUPPORT</div><h2>排查档案还是一头雾水，工单！进群问！</h2></div><p>文档和工单负责把问题说清楚，Telegram 群聊负责快速沟通。群主、管理员和热心群友都会参与回答。</p></div><div class="support"><aside class="support-callout"><div class="eyebrow">TELEGRAM COMMUNITY</div><h3>进群就能问。</h3><p>官网打不开、节点切换、客户端配置等问题，都可以在群里说明情况并联系群主或管理员。</p><a class="button" href="https://t.me/Etcloud" target="_blank" rel="noreferrer">加入 Etcloud 群聊 ↗</a></aside><div class="story"><div class="story-row"><strong>群聊现场</strong><span>“网站咋上不去了？”<br>“官网是 etcloud,one。”<br>“输入错了，是 etcloud.one。”<br>“卧槽了，我咋跟个二逼似的。对不起哥我错了。”</span></div><div class="story-row"><strong>怎么获得帮助</strong><span>先查官网文档，再开工单跟进具体问题。需要即时沟通时，直接在 Telegram 群里描述设备、网络和现象。</span></div></div></div></div></section>
+  </main>
+  <footer class="shell source"><span>资料来源：<a href="https://etcloud.top/#/register?code=QkfuWy3i" target="_blank" rel="noreferrer">Eternal Network 使用文档</a> · 抓取于 2026-09-01</span><span><a href="https://etcloud.top/#/register?code=QkfuWy3i" target="_blank" rel="noreferrer">etcloud.top ↗</a></span></footer>
+  <script>
+    const toggle = document.querySelector('.theme-toggle');
+    const savedTheme = localStorage.getItem('eternal-theme');
+    if (savedTheme === 'dark') document.body.classList.add('dark');
+    const syncToggle = () => { const dark = document.body.classList.contains('dark'); toggle.setAttribute('aria-pressed', String(dark)); toggle.textContent = dark ? '白日模式' : '黑夜模式'; toggle.setAttribute('aria-label', dark ? '切换白日模式' : '切换黑夜模式'); };
+    syncToggle();
+    toggle.addEventListener('click', () => { const dark = document.body.classList.toggle('dark'); localStorage.setItem('eternal-theme', dark ? 'dark' : 'light'); syncToggle(); });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
