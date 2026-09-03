@@ -37,7 +37,7 @@ Eternal Network 是一个面向日常访问、流媒体和开发工作的精品�
 
 1. 在[官网](https://etcloud.top/#/register?code=QkfuWy3i)注册并购买套餐。
 2. 将订阅导入对应平台的客户端，按需要选择 TUN、规则或全局模式。
-3. 需要检测流媒体区域时，在 macOS 终端或 Windows Git Bash 中运行：
+3. 需要检测流媒体区域时，打开TUN后在 macOS 终端或 Windows Git Bash 中运行：
 
    ```bash
    bash <(curl -L -s check.unlock.media)
