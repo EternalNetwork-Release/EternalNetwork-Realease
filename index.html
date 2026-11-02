@@ -140,6 +140,13 @@
       .source span + span { display:block; margin-top:7px; }
     }
     @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
+    @media (max-width:360px) {
+      .topbar { gap:6px; }
+      .brand { gap:5px; font-size:11px; }
+      .brand-mark { width:22px; height:22px; }
+      nav { gap:5px; font-size:11px; }
+      .nav-cta,.theme-toggle { padding:6px; }
+    }
   </style>
 </head>
 <body>
