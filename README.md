@@ -4,6 +4,7 @@
 
 - 在线页面：<https://eternalnetwork-release.github.io/>
 - 注册、购买与客户端入口：<https://etcloud.top/#/register?code=QkfuWy3i>
+- 备用入口：<https://edu.artyun.top/#/register?code=QkfuWy3i> · <https://9d4b878b9d8e2b31.cdn.jiashule.com/#/register?code=QkfuWy3i>
 - Telegram 群组：<https://t.me/Etcloud>
 - 页面文件：[`index.html`](./index.html)
 
@@ -14,7 +15,7 @@
 - 16 元起套餐提供 IEPL 专线，线路侧重低延迟和稳定连接。
 - 节点统一使用 AnyTLS，支持 TUN、全局和规则模式。
 - 可用于 YouTube、Netflix、Disney+、Spotify 等服务，并提供 [RegionRestrictionCheck](https://github.com/lmc999/RegionRestrictionCheck) 解锁检测方法。
-- 支持 Windows、macOS、Android、Linux 和 OpenWrt。iOS 用户可按文档使用 Shadowrocket，共享账户用于下载应用。
+- 支持 Windows、macOS、Android、Linux 和 OpenWrt。iOS 用户可按文档使用 Nextin，输入标识码 etcloud 后登录账号。
 - 官网文档、工单和 Telegram 群组都可获得支持，遇到配置或线路问题可以直接联系群主、管理员和群友。
 
 ### 月付套餐
