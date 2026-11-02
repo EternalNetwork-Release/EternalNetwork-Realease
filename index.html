@@ -17,7 +17,7 @@
     .shell { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
     .topbar { min-height:72px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); gap:20px; }
     .brand { display:inline-flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; letter-spacing:.02em; }
-    .brand-mark { width:28px; height:28px; display:grid; place-items:center; border:1px solid var(--ink); font:11px var(--mono); }
+    .brand-mark { width:28px; height:28px; object-fit:contain; }
     nav { display:flex; align-items:center; justify-content:flex-end; gap:16px; color:var(--muted); font-size:13px; }
     nav a { text-decoration:none; }
     nav a:hover,nav a:focus-visible { color:var(--ink); }
@@ -141,7 +141,7 @@
 </head>
 <body>
   <header class="topbar shell">
-    <a class="brand" href="#top" aria-label="Eternal Network 首页"><span class="brand-mark">EN</span><span>Eternal Network</span></a>
+    <a class="brand" href="#top" aria-label="Eternal Network 首页"><img class="brand-mark" src="./favicon.png" alt="" width="28" height="28"><span>Eternal Network</span></a>
     <nav aria-label="页面导航"><a href="#benefits">服务权益</a><a href="#pricing">价格套餐</a><a href="#scenarios">服务目录</a><a href="#support">支持</a><a class="nav-cta" href="https://etcloud.top/#/register?code=QkfuWy3i" target="_blank" rel="noreferrer">进入官网 ↗</a><button class="theme-toggle" type="button" aria-pressed="false" aria-label="切换黑夜模式">黑夜模式</button></nav>
   </header>
   <main id="top">
