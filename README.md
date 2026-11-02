@@ -1,29 +1,68 @@
-# Eternal Network 使用指南
+# Eternal Network 服务介绍页
 
-Eternal Network（etcloud）的入口、注册和客户端使用说明。服务信息可能变化，购买前请登录面板查看最新套餐、价格和条款。
+这是一个单文件静态页面，用来介绍 Eternal Network 的线路、套餐、客户端和支持渠道。页面默认使用白色主题，可切换黑夜模式；不展示任何客户端下载直链，客户端入口统一指向官网。
 
-- [服务介绍页面](https://eternalnetwork-release.github.io/)
-- [官网收藏页](https://etcloud.one/)：建议收藏，以便查找可用入口。
-- [用户面板](https://etcloud.top/) · [备用面板](https://panel.etcloud.top/)
-- [邀请注册链接](https://etcloud.top/#/register?code=QkfuWy3i)：目前注册需要有效邀请链接；链接是否有效以注册页面为准。
-- [Telegram 群组](https://t.me/etcloud) · [Telegram 频道](https://t.me/EteralNetwork_pd)
+- 在线页面：<https://eternalnetwork-release.github.io/>
+- 注册、购买与客户端入口：<https://etcloud.top/#/register?code=QkfuWy3i>
+- Telegram 群组：<https://t.me/Etcloud>
+- 页面文件：[`index.html`](./index.html)
 
-## 开始使用
+## 页面内容
 
-1. 通过有效邀请链接注册，登录用户面板。
-2. 在「购买订阅」中查看当前套餐、流量、价格及适用条件，再按需选择。
-3. 打开面板的「使用文档」，按照首篇教程下载安装专用客户端。面板公告说明，专用客户端与其他客户端的线路不同，建议使用专用客户端。
-4. 按教程登录客户端或导入订阅，及时更新订阅。已使用过的用户可重新导入订阅；使用 App 的用户可重新登录。
+### 服务权益
 
-## 遇到问题
+- 16 元起套餐提供 IEPL 专线，线路侧重低延迟和稳定连接。
+- 节点统一使用 AnyTLS，支持 TUN、全局和规则模式。
+- 可用于 YouTube、Netflix、Disney+、Spotify 等服务，并提供 [RegionRestrictionCheck](https://github.com/lmc999/RegionRestrictionCheck) 解锁检测方法。
+- 支持 Windows、macOS、Android、Linux 和 OpenWrt。iOS 用户可按文档使用 Shadowrocket，共享账户用于下载应用。
+- 官网文档、工单和 Telegram 群组都可获得支持，遇到配置或线路问题可以直接联系群主、管理员和群友。
 
-- Windows 客户端提示无法连接网站时，面板建议先退出登录再重新登录，或重新安装客户端。
-- Shadowrocket 没有节点或只显示两个节点时，面板建议更新软件。
-- 付款未到账时，在面板「我的工单」提交问题。也可通过使用文档和 Telegram 群组寻求帮助。
-- 线路、节点、流媒体和设备兼容性可能随时间或网络变化，请以面板与实际测试结果为准。
+### 月付套餐
 
-## 本项目
+| 套餐 | 流量 | 线路 | 价格 |
+| --- | ---: | --- | ---: |
+| 焦糖布丁 | 60 GB | 低延迟隧道 | ￥6/月 |
+| 芒果奶昔 | 130 GB | 低延迟隧道 | ￥10/月 |
+| 黄油曲奇 | 245 GB | 低延迟隧道 + IEPL | ￥16/月 |
+| 奶油奶酪 | 335 GB | 低延迟隧道 + IEPL | ￥24/月 |
+| 芝士蛋糕 | 720 GB | 低延迟隧道 + IPLC | ￥42/月 |
 
-`index.html` 是无需构建的静态页面，直接在浏览器打开即可预览。GitHub Pages 使用 `master` 分支的根目录发布。
+价格和线路状态以官网实时信息为准。
 
-以上使用提示依据 2026 年 11 月 2 日查看到的面板公告（公告日期为 2026 年 11 月 1 日）。本次未能核实最新套餐详情，因此不列出价格或流量。注册、客户端和服务政策请以面板最新信息为准。
+## 稳定性测试
+
+页面提供三种测试方式，适合先测试再决定是否购买：
+
+1. 安装 [NexTrace](https://github.com/nxtrace/NTrace-core)，在 WSL、Linux 或 macOS 终端运行：
+
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/nxtrace/NTrace-core/main/nt_install.sh | bash
+   nextrace 节点域名或IP
+   ```
+
+2. Windows 安装 [tcping](https://github.com/elifulkerson/tcping/releases)：
+
+   ```powershell
+   winget install --id ELIFULKERSON.tcping --exact
+   tcping -t 节点域名或IP 443
+   ```
+
+   持续运行几分钟，观察 TCP 建连是否超时、延迟是否反复升高。
+
+3. 不想安装工具时，使用 [ITDOG TCPing 持续测试](https://www.itdog.cn/tcping/)，填入节点域名或 IP，端口填写 `443`。
+
+持续 TCPing 比单次 ping 更接近真实连接体验。比较不同节点时，尽量使用相同网络、相同端口和相近的测试时长。
+
+## 本地预览与部署
+
+项目不需要构建工具。直接打开 `index.html` 即可预览，也可以在项目目录运行：
+
+```bash
+python -m http.server 8000
+```
+
+GitHub Pages 发布源设置为 `master` 分支的根目录 `/`。当前页面发布于 [`EternalNetwork-Release/EternalNetwork-Release.github.io`](https://github.com/EternalNetwork-Release/EternalNetwork-Release.github.io)。
+
+## 信息来源
+
+页面内容整理自 Eternal Network 使用文档。套餐价格、线路可用性、客户端版本和支持政策可能变化，请以官网和 Telegram 群组中的最新信息为准。
